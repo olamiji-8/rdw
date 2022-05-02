@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rdw/screens/letter_paint_screen.dart';
 import '../core/lists/letter_card_lists.dart';
 import '../widgets/letter_card.dart';
 class ScreenThree extends StatelessWidget {
@@ -23,7 +24,9 @@ class ScreenThree extends StatelessWidget {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
       ), itemBuilder: (context, index){
-        return LetterCard(letter: letters[index].letter, onTap: (){},);
+        return LetterCard(
+          letter: letters[index].letter,
+          onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> VideoDescScreen())),);
       }),
     );
   }
